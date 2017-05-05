@@ -1,13 +1,64 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>index</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+     <head>
+       <meta  charset="utf-8">
+       <title>Drag and Drop</title>
+       <link rel="stylesheet" href="jquery-ui.min.css">
+       <link rel="stylesheet" href="style.css" type="text/css">
+       <script src="external/jquery/jquery.js"></script>
+       <script src="./jquery-ui.min.js"></script>
+     </head>
 
-    <body>
+<body>
+        <div id="bonbon">
+              <img class="mms1" src="./mmsblue.png" alt="blue"></img>
+              <img class="mms1" src="./mmsbrown.png" alt="brown"></img>
+              <img class="mms1" src="./mmsyellow.png" alt="yellow"></img>
+              <img class="mms1" src="./mmsorange.png" alt="orange"></img>
+              <img class="mms1" src="./mmsvert.png" alt="vert"></img>
+              <img class="mms1" src="./mmsred.png" alt="red"></img>
+        </div>
+        <button id="replay">Rejouer !</button>
+
+        <h3 id="reste"></h3>
+
+        <div id="paquet">
+              <img src="./paquet.png" alt="Paquet MMS"></img>
+        </div>
+
+        <script>
+
+              $(document).ready(function() {
+                   $('.mms1').draggable();
+                   var mmss=$('.mms1').length;
+                   var count=0;
+                   var lesscount=6;
+
+                   $('#paquet').droppable({
+                   drop :function() {
+                     count++;
+                     lesscount--;
+
+                     $('#reste').text('Il reste ' + lesscount + ' MM s a rentrer');
+
+                   if (mmss == count){
+                     alert("MMS déposée");
+                   }
+                  }
+                  });
+
+                   $('#replay').click(function(){
+                     location.reload();
+                   });
+                });
 
 
-    </body>
+
+
+
+
+
+        </script>
+
+</body>
 </html>

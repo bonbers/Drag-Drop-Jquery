@@ -1,3 +1,38 @@
 /*******************************
 			  CSS
 *******************************/
+#paquet {
+  text-align: center;
+  position: absolute;
+   top: 35%;
+   margin-left: 30%;
+
+}
+#bonbon {
+  margin-top: 5%;
+  text-align: center;
+}
+img {
+  padding-right: 5%;
+}
+img #bonbon {
+  z-index: 1;
+}
+
+img #paquet {
+  z-index: 3;
+}
+#replay {
+  background-color: green;
+  color: black;
+  margin-left: 45%;
+  margin-top: 5%;
+  border-style: none;
+  border-radius : 7px;
+  height: 30px;
+  width: 100px;
+  font-weight: 600;
+}
+h3{
+  text-align: center;
+}

@@ -1,3 +1,5 @@
+https://htmlpreview.github.io/?https://github.com/bonbers/Drag-Drop-Jquery/blob/master/index.html
+
 # Jeu Drag and Drop 
 
 * Charger **Jquery classique** et le lier dans le head du document
